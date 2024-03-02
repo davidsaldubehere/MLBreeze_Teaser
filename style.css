@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(334deg, #aec7ff, #2062ae, #011550);
+  background-size: 180% 180%;
+  animation: gradient-animation 6s ease infinite;
+}
+.logo {
+  font-weight: bold;
+}
+nav {
+  padding: 20px 20px;
+  background-color: rgba(255, 255, 255, 0.077);
+  font-family: Poppins, sans-serif;
+}
+nav ul {
+  width: 30%;
+  display: flex;
+  list-style-type: none;
+}
+nav li a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: white;
+  transition: 0.4s;
+}
+nav li a:hover {
+  color: #9dcbff;
+}
+main {
+  position: relative;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: rgba(255, 255, 255, 0.594);
+  font-family: Poppins, sans-serif;
+  font-size: 30px;
+}
+main #typify-text {
+  color: rgb(255, 255, 255);
+}
+
+.footer {
+  margin-bottom: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  font-family: Poppins, sans-serif;
+  color: white;
+}
+.footer .item {
+  border-top: 5px solid rgba(255, 255, 255, 0.124);
+  padding-top: 10px;
+  margin: 20px;
+  transition-duration: 0.5s;
+}
+.footer .item h2 {
+  color: rgba(255, 255, 255, 0.594);
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.footer .item:hover {
+  cursor: pointer;
+  transform: translateY(-30px);
+}
+.math-expression {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.22); /* Change symbol color as needed */
+  font-size: 20px; /* Change font size as needed */
+  opacity: 0;
+  z-index: -1;
+  animation: fadeinout 5s infinite; /* Adjust animation duration as needed */
+}
+@keyframes fadeinout {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
