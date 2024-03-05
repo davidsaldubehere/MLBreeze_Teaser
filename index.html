@@ -2,7 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, initial-scale=1.0
+    minimum-scale=1.0"
+    />
     <title>MLBreeze</title>
     <script src="https://unpkg.com/typify.js@1.1.9/dist/typify.min.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -19,39 +23,43 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body id="background">
-    <div class="nav" id="navbar">
-      <a href="#home" class="active">MLBreeze</a>
-      <a href="#contact">Contact</a>
-      <a href="#about">About</a>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-      </a>
-    </div>
-    <main>
-      <h1 class="indicator">If you want to learn...</h1>
-      <h1 id="typify-text"></h1>
-      <h1 class="indicator">We've got you covered</h1>
-    </main>
-    <div class="footer">
-      <div class="item">
-        <h2>Linear Algebra</h2>
-        <p>The basics of linear algebra summarized and visualized</p>
+    <div class="wrapper">
+      <div class="nav" id="navbar">
+        <a href="#home" class="active">MLBreeze</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
       </div>
-      <div class="item" onclick="window.location.href='optimization.html'">
-        <h2>Optimization</h2>
-        <p>An overview of important function optimization strategies</p>
-      </div>
-      <div class="item">
-        <h2>Algorithm Design</h2>
-        <p>An overview of the most popular algorithms and models in use</p>
-      </div>
-      <div class="item">
-        <h2>Paper Translation</h2>
-        <p>
-          Simplified versions of the most important AI papers in the last decade
-        </p>
+      <main>
+        <h1 class="indicator">If you want to learn...</h1>
+        <h1 id="typify-text"></h1>
+        <h1 class="indicator">We've got you covered</h1>
+      </main>
+      <div class="footer">
+        <div class="item">
+          <h2>Linear Algebra</h2>
+          <p>The basics of linear algebra summarized and visualized</p>
+        </div>
+        <div class="item" onclick="window.location.href='optimization.html'">
+          <h2>Optimization</h2>
+          <p>An overview of important function optimization strategies</p>
+        </div>
+        <div class="item">
+          <h2>Algorithm Design</h2>
+          <p>An overview of the most popular algorithms and models in use</p>
+        </div>
+        <div class="item">
+          <h2>Paper Translation</h2>
+          <p>
+            Simplified versions of the most important AI papers in the last
+            decade
+          </p>
+        </div>
       </div>
     </div>
   </body>
+
   <script src="js/app.js"></script>
 </html>
