@@ -3,11 +3,11 @@
 }
 body {
   width: 100vw;
+  overflow-x: hidden;
   height: 100vh;
   background: linear-gradient(334deg, #aec7ff, #2062ae, #011550);
   background-size: 180% 180%;
   animation: gradient-animation 6s ease infinite;
-  overflow-y: hidden;
 }
 .logo {
   font-weight: bold;
