@@ -16,16 +16,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body id="background">
     <div class="nav" id="navbar">
       <a href="#home" class="active">MLBreeze</a>
-      <a href="#news">Topics</a>
       <a href="#contact">Contact</a>
       <a href="#about">About</a>
-      <a href="#about">Pricing</a>
-      <a href="#about">Forum</a>
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>
       </a>
@@ -40,13 +37,13 @@
         <h2>Linear Algebra</h2>
         <p>The basics of linear algebra summarized and visualized</p>
       </div>
-      <div class="item">
+      <div class="item" onclick="window.location.href='optimization.html'">
         <h2>Optimization</h2>
         <p>An overview of important function optimization strategies</p>
       </div>
       <div class="item">
-        <h2>Model Design</h2>
-        <p>An overview of the most popular model architectures in use</p>
+        <h2>Algorithm Design</h2>
+        <p>An overview of the most popular algorithms and models in use</p>
       </div>
       <div class="item">
         <h2>Paper Translation</h2>
@@ -56,5 +53,5 @@
       </div>
     </div>
   </body>
-  <script src="app.js"></script>
+  <script src="js/app.js"></script>
 </html>

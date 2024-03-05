@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(334deg, #aec7ff, #2062ae, #011550);
+  background-size: 180% 180%;
+  animation: gradient-animation 6s ease infinite;
+  overflow: hidden;
+}
+.logo {
+  font-weight: bold;
+}
+
+.nav {
+  background-color: #3333332d;
+  overflow: hidden;
+}
+
+.nav a {
+  float: left;
+  display: block;
+  color: rgba(255, 255, 255, 0.594);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  transition: 0.3s;
+  font-family: Poppins, sans-serif;
+}
+
+.nav a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.nav a.active {
+  background-color: #8080804f;
+  color: white;
+}
+
+.nav .icon {
+  display: none;
+}
+main {
+  z-index: -1;
+  position: absolute;
+  width: 100vw;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: rgba(255, 255, 255, 0.594);
+  font-family: Poppins, sans-serif;
+  font-size: 30px;
+}
+main #typify-text {
+  color: rgb(255, 255, 255);
+}
+
+.footer {
+  margin-bottom: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  font-family: Poppins, sans-serif;
+  color: white;
+}
+.footer .item {
+  border-top: 5px solid rgba(255, 255, 255, 0.124);
+  padding-top: 10px;
+  margin: 20px;
+  transition-duration: 0.5s;
+}
+.footer .item h2 {
+  color: rgba(255, 255, 255, 0.594);
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.footer .item:hover {
+  cursor: pointer;
+  transform: translateY(-30px);
+}
+.math-expression {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.22); /* Change symbol color as needed */
+  font-size: 20px; /* Change font size as needed */
+  opacity: 0;
+  z-index: -1;
+  animation: fadeinout 5s infinite; /* Adjust animation duration as needed */
+}
+@media (max-width: 768px) {
+  main {
+    font-size: 20px;
+  }
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer .item {
+    margin: 10px;
+  }
+  .footer .item h2 {
+    font-size: 15px;
+  }
+  .footer .item:hover {
+    transform: translateY(-20px);
+  }
+}
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the nav (.icon) */
+@media screen and (max-width: 600px) {
+  .nav {
+    background-color: #333333f0;
+  }
+  .nav a:not(:first-child) {
+    display: none;
+  }
+  .nav a.icon {
+    float: right;
+    display: block;
+  }
+  .nav.responsive {
+    position: relative;
+  }
+  .nav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .nav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+@keyframes fadeinout {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
