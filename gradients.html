@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Gradients</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <link rel="stylesheet" href="css/gradients.css" />
+  </head>
+  <body>
+    <div class="nav" id="navbar">
+      <a href="index.html" class="active">MLBreeze</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <main>
+      <h1>Introduction to Gradients</h1>
+      <section>
+        <div class="text">
+          <h2>What is a gradient?</h2>
+          <p>
+            You may be familar with functions in 2D space. For example, you
+            might have seen this function before: \(f(x) = x^2\). We can
+            represent inputs and outputs in a 2D (flat) space.
+          </p>
+          <div class="video-container">
+            <video controls>
+              <source src="assets/gradients_2d_function.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <p>
+            A fundamental aspect of gradients is that they typically deal with
+            dimensions higher than 2D. <br />
+            For example, this function \(f(x, y) = x^2 + y^2\) is a function in
+            3D space. We have two inputs that can be represented on our previous
+            2D plane, and one output that can be represented on a third axis.
+            So, this new third up-down axis is simply the output of the function
+            just as the y-axis was the output of the 2D function.
+          </p>
+        </div>
+        <!--TODO: Add I get this or I am confused buttons-->
+      </section>
+    </main>
+    <div class="intro">
+      <div class="intro-text">
+        <h1 class="hide">
+          <span class="text">Intro to</span>
+        </h1>
+        <h1 class="hide">
+          <span class="text">Gradients</span>
+        </h1>
+      </div>
+    </div>
+    <div class="slider"></div>
+    <script defer src="js/gradients.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+      integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
