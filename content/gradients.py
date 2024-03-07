@@ -171,9 +171,7 @@ class Fifth(ThreeDScene):
             # Add gradient vector
             gradient_vector = Arrow3D(start=np.array([x, y, z]), end=np.array([x, y, z]) + gradient(x, y), color=RED)
             self.add(gradient_vector)
-        
-        self.play(Create(axes))
-        
+                
         self.begin_ambient_camera_rotation(
             rate=PI/10, about="theta"
         )

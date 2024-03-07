@@ -12,6 +12,10 @@
       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
     ></script>
     <link rel="stylesheet" href="css/gradients.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
     <div class="nav" id="navbar">
@@ -41,7 +45,7 @@
       <h1>Introduction to Gradients</h1>
       <section>
         <div class="text">
-          <h2>What is a gradient?</h2>
+          <h2>Background</h2>
           <p>
             You may be familar with functions in
             <span class="special">2D </span> space. For example, you might have
@@ -151,7 +155,7 @@
       </section>
       <section>
         <div class="text">
-          <h2>Come on we still haven't talked about gradients</h2>
+          <h2>So what is a gradient?</h2>
           <p>
             A gradient is simply a vector of these partial derivatives.
             <br /><br /><br />
@@ -168,19 +172,22 @@
             Let's plot the gradient of this function at a few points.
             <br /><br /><br />
             At the point (1, 1), the gradient is \(\nabla f = \begin{bmatrix} 2
-            \\ 2 \end{bmatrix}\). <br /><br /><br />
-            At the point (-1, 1), the gradient is \(\nabla f = \begin{bmatrix}
-            -2 \\ 2 \end{bmatrix}\). <br /><br /><br />
+            \\ 2 \end{bmatrix}\). At the point (-1, 1), the gradient is \(\nabla
+            f = \begin{bmatrix} -2 \\ 2 \end{bmatrix}\). At the point (1, -1),
+            the gradient is \(\nabla f = \begin{bmatrix} 2 \\ -2
+            \end{bmatrix}\). At the point (-1, -1), the gradient is \(\nabla f =
+            \begin{bmatrix} -2 \\ -2 \end{bmatrix}\). We've included a few more
+            gradient vectors below as well.
           </p>
           <div class="video-container">
             <video controls>
-              <source src="assets/gradi.mp4" type="video/mp4" />
+              <source src="assets/gradient_3d_tangent.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
           <p>
             Interestingly, the gradient vectors point towards the direction that
-            will increase \(f(x,y)\) the most.
+            will increase \(f(x,y)\) the most which in this case is outward
             <br /><br /><br />
             By direction, we mean the direction in which the input x or y
             increases.
