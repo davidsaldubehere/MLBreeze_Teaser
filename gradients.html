@@ -23,14 +23,30 @@
       </a>
     </div>
     <main>
+      <dialog id="dialog">
+        <h2>Definition:</h2>
+        <p id="dialogContent">
+          A CSS-only modal based on the
+          <a
+            href="https://developer.mozilla.org/es/docs/Web/CSS/::backdrop"
+            target="_blank"
+            >::backdrop</a
+          >
+          pseudo-class. Hope you find it helpful.
+        </p>
+        <button onclick="window.dialog.close();" aria-label="close" class="x">
+          ❌
+        </button>
+      </dialog>
       <h1>Introduction to Gradients</h1>
       <section>
         <div class="text">
           <h2>What is a gradient?</h2>
           <p>
-            You may be familar with functions in 2D space. For example, you
-            might have seen this function before: \(f(x) = x^2\). We can
-            represent inputs and outputs in a 2D (flat) space.
+            You may be familar with functions in
+            <span class="special">2D </span> space. For example, you might have
+            seen this function before: \(f(x) = x^2\). We can represent inputs
+            and outputs in a <span class="special">2D </span>space.
           </p>
           <div class="video-container">
             <video controls>
@@ -41,15 +57,140 @@
 
           <p>
             A fundamental aspect of gradients is that they typically deal with
-            dimensions higher than 2D. <br />
+            <span class="special">dimensions </span> higher than
+            <span class="special">2D </span> <br /><br /><br />
             For example, this function \(f(x, y) = x^2 + y^2\) is a function in
             3D space. We have two inputs that can be represented on our previous
             2D plane, and one output that can be represented on a third axis.
             So, this new third up-down axis is simply the output of the function
-            just as the y-axis was the output of the 2D function.
+            just as the y-axis was the output of the
+            <span class="special">2D </span> function.
           </p>
+          <div class="video-container">
+            <video controls>
+              <source src="assets/gradients_3d_function.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <p>
+            Gradients are simply derivatives in higher
+            <span class="special">dimensions </span> such as these.
+            <br /><br /><br />
+            Recall what a derivative is for the previous 2D function \(f(x) =
+            x^2\). <br /><br /><br />
+            The derivative with respect to x is \(f'(x) = 2x\). This tells us
+            that the output of the function changes by a factor of 2 for every
+            change in the input.<br /><br /><br />
+            If x is 1, the function is increasing at a rate of 2. If x is 2, the
+            function is increasing at a rate of 4.<br /><br /><br />
+            Basically, it gives us a sense of how fast the function is going to
+            increase or decrease at a given point. <br /><br /><br />
+            If we plot this derivative at a few points paired with a line that
+            is <span class="special">tangent </span> to the function, you can
+            see that this line has the same slope of the function at that point.
+            The slope gets steeper and steeper because \(f(x) = x^2\) is getting
+            larger and larger. In a way, you can think of the derivative as a
+            measure of the steepness of the line that is
+            <span class="special">tangent </span> to the function at a given
+            point.
+          </p>
+          <div class="video-container">
+            <video controls>
+              <source src="assets/gradients_2d_tangent.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
         <!--TODO: Add I get this or I am confused buttons-->
+      </section>
+      <section>
+        <div class="text">
+          <h2>
+            How do we apply this to higher
+            <span class="special">dimensions </span>?
+          </h2>
+          <p>
+            In higher <span class="special">dimensions </span>, we compute
+            gradients as partial derivatives which involves treating all
+            variables except one as a constant before applying
+            <span class="special">standard derivation rules </span>
+            <br /><br /><br />
+            For example, consider the function \(f(x, y) = x^2 + y^2\).
+          </p>
+          <p>
+            The partial derivatives of this function are: \(\frac{\partial
+            f}{\partial x} = 2x\) and \(\frac{\partial f}{\partial y} = 2y\).
+          </p>
+          <div class="video-container">
+            <video controls>
+              <source
+                src="assets/gradients_partials_calculation.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <p>
+            But what do these partial derivatives mean? <br /><br /><br />
+            The partial derivative \(\frac{\partial f}{\partial x}\) tells us
+            how the output of the function changes with respect to the input x.
+            <br /><br /><br />
+            The partial derivative \(\frac{\partial f}{\partial y}\) tells us
+            how the output of the function changes with respect to the input y.
+            <br /><br /><br />
+            Just as the derivative of \(f(x) = x^2\) told us how the output of
+            the function changes with respect to the input x, these partial
+            derivatives tell us how quickly the output of the function increase
+            or decrease as x or y increases or decreases.
+            <br /><br /><br />
+            In this case, if we x is 1, the function is increasing at a rate of
+            2 and if y is 2, the function is increasing at a rate of 4.
+            <br /><br /><br />
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="text">
+          <h2>Come on we still haven't talked about gradients</h2>
+          <p>
+            A gradient is simply a vector of these partial derivatives.
+            <br /><br /><br />
+            It combines all of the information about how the function changes
+            with respect to each input into a single construct that has some
+            nice properties. <br /><br /><br />
+            For the function \(f(x, y) = x^2 + y^2\), the gradient is \(\nabla f
+            = \begin{bmatrix} \frac{\partial f}{\partial x} \\ \frac{\partial
+            f}{\partial y} \end{bmatrix} = \begin{bmatrix} 2x \\ 2y
+            \end{bmatrix}\).<br /><br /><br />
+            To illustrate these properties, lets consider our function again
+            \(f(x,y) = x^2 y^2\). with gradient \(\nabla f = \begin{bmatrix} 2x
+            \\ 2y \end{bmatrix}\).<br /><br /><br />
+            Let's plot the gradient of this function at a few points.
+            <br /><br /><br />
+            At the point (1, 1), the gradient is \(\nabla f = \begin{bmatrix} 2
+            \\ 2 \end{bmatrix}\). <br /><br /><br />
+            At the point (-1, 1), the gradient is \(\nabla f = \begin{bmatrix}
+            -2 \\ 2 \end{bmatrix}\). <br /><br /><br />
+          </p>
+          <div class="video-container">
+            <video controls>
+              <source src="assets/gradi.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <p>
+            Interestingly, the gradient vectors point towards the direction that
+            will increase \(f(x,y)\) the most.
+            <br /><br /><br />
+            By direction, we mean the direction in which the input x or y
+            increases.
+            <br /><br /><br />
+            This is a fundamental property of gradient vectors. They point in
+            the direction such that increasing the input variables in that
+            direction will result in the greatest increase in the output of the
+            function. Remember this!
+          </p>
+        </div>
       </section>
     </main>
     <div class="intro">
