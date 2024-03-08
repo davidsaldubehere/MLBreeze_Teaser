@@ -11,7 +11,13 @@ body {
   background-color: #3333332d;
   overflow: hidden;
 }
-
+main h1 {
+  text-align: center;
+  margin: 20px;
+  font-size: 40px;
+  color: rgba(255, 255, 255, 0.872);
+  font-family: Poppins, sans-serif;
+}
 .nav a {
   float: left;
   display: block;
@@ -41,6 +47,8 @@ main li {
   list-style: none;
 }
 .topic {
+  animation: fadeinout 1s; /* Adjust animation duration as needed */
+
   background-color: rgba(255, 255, 255, 0.719);
   border-radius: 10px;
   margin: 30px;
@@ -108,5 +116,14 @@ main li {
   }
   .topic .content {
     flex-wrap: wrap;
+  }
+}
+
+@keyframes fadeinout {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

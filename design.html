@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Optimization</title>
-    <link rel="stylesheet" href="css/optimization.css" />
+    <title>Algorithms and Models</title>
+    <link rel="stylesheet" href="css/topic_selection.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -12,7 +12,7 @@
   </head>
   <body>
     <div class="nav" id="navbar">
-      <a href="index.html" class="active">MLBreeze</a>
+      <a href="index.html" class="active">MLbreeze</a>
       <a href="#contact">Contact</a>
       <a href="#about">About</a>
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -20,45 +20,44 @@
       </a>
     </div>
     <main>
+      <h1>Algorithms and Models</h1>
       <ul>
         <li>
           <div class="topic">
             <div class="header">
-              <h2>Gradient Descent Algorithms</h2>
-              <p>Only the Gradients material is available at this time</p>
+              <h2>Classification Models</h2>
+              <p>
+                Only the k nearest neighbor content is available at this time
+              </p>
             </div>
             <div class="content">
               <img
-                src="assets/gradient_descent.gif"
+                src="assets/matrix.gif"
                 alt="Gradient Descent"
                 class="gifs"
               />
               <div class="inner">
-                <a href="gradients.html">Gradients</a>
+                <a href="gradients.html">K - Nearest Neighbor</a>
                 <p>
-                  Introduction to gradients, what they are, and how to calculate
-                  them
+                  A detailed look at the k-nearest neighbor algorithm and how it
+                  is used in machine learning
                 </p>
               </div>
               <div class="inner">
-                <a href="">Basic Gradient Descent</a>
+                <a href="">Decision Trees</a>
                 <p>
-                  Introduction to batch gradient descent, also known as basic
-                  gradient descent
+                  An introduction into the most intuitive classification model
                 </p>
               </div>
               <div class="inner">
-                <a href="">Stochastic Gradient Descent</a>
-                <p>
-                  Introduction to stochastic gradient descent, a variation of
-                  basic gradient descent used for large datasets
-                </p>
+                <a href="">Perceptron</a>
+                <p>The cornerstone of neural networks</p>
               </div>
               <div class="inner">
-                <a href="">Momentum Gradient Descent</a>
+                <a href=""> Support Vector Machines </a>
                 <p>
-                  Introduction to momentum gradient descent, a variation of
-                  basic gradient descent used to speed up convergence
+                  An introduction into the algorithm that was cutting edge
+                  before neural networks
                 </p>
               </div>
             </div>
@@ -67,32 +66,37 @@
         <li>
           <div class="topic">
             <div class="header">
-              <h2>Maximum Likelihood Estimation</h2>
+              <h2>Regression Models</h2>
             </div>
             <div class="content">
-              <img src="assets/mle.gif" alt="Gradient Descent" class="gifs" />
+              <img src="assets/vector.gif" alt="vector" class="gifs" />
               <div class="inner">
-                <a href="">Basic Probability</a>
+                <a href=""> Linear Regression </a>
                 <p>
-                  Introduction to independence, conditional probability, and
-                  probability distribution functions and their properties
+                  A simple algorithm with powerful applications in machine
+                  learning in the form of Ordinary Least Squares
                 </p>
               </div>
               <div class="inner">
-                <a href="">Intuitive Maximum Likelihood Estimation</a>
-                <p>An intuitive explanation of maximum likelihood estimation</p>
-              </div>
-              <div class="inner">
-                <a href="">Formalized Maximum Likelihood Estimation</a>
+                <a href=""> Ridge and Lasso Regression </a>
                 <p>
-                  Introduction to the notation of maximum likelihood estimation
+                  An introduction into regularization and how it is used in in
+                  Ridge and Lasso regression
                 </p>
               </div>
               <div class="inner">
-                <a href="">Log Likelihood</a>
+                <a href=""> Polynomial Regression </a>
                 <p>
-                  Introduction to the log likelihood function, its properties,
-                  and role in maximum likelihood estimation
+                  How to use linear regression to fit non-linear data
+                  efficiently
+                </p>
+              </div>
+              <div class="inner">
+                <a href=""> Logistic Regression </a>
+                <p>
+                  Although not a regression model, it takes inspiration from
+                  regression algorithms to classify binray data using
+                  probabilities from regularization
                 </p>
               </div>
             </div>
@@ -101,33 +105,79 @@
         <li>
           <div class="topic">
             <div class="header">
-              <h2>Convexity and Critical Points</h2>
+              <h2>Deep Learning Models</h2>
+            </div>
+            <div class="content">
+              <img src="assets/vector.gif" alt="vector" class="gifs" />
+              <div class="inner">
+                <a href=""> Neural Networks </a>
+                <p>
+                  How to build a neural network with the perceptron model and
+                  what classfies as a deep neural network
+                </p>
+              </div>
+              <div class="inner">
+                <a href=""> Convolutional Neural Networks </a>
+                <p>
+                  An introduction into the most popular deep learning model for
+                  computer vision
+                </p>
+              </div>
+              <div class="inner">
+                <a href="">Recurrent Neural Networks</a>
+                <p>
+                  An introduction into the learning model that can handle
+                  sequential data
+                </p>
+              </div>
+              <div class="inner">
+                <a href="">Multilayer Nueral Networks</a>
+                <p>
+                  How to combine and connect mutliple types of neural networks
+                  through layer connections to create a more powerful model
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="topic">
+            <div class="header">
+              <h2>Cutting Edge Models</h2>
             </div>
             <div class="content">
               <img
-                src="assets/convex.gif"
-                alt="Gradient Descent"
+                src="assets/matrix_calculus.gif"
+                alt="Matrix Calculus"
                 class="gifs"
               />
+
               <div class="inner">
-                <a href="">Convex Functions</a>
+                <a href="">Self Attention</a>
                 <p>
-                  Intuitive and formal explanations of convex functions and why
-                  they are important
+                  The building block of cutting edge models and how it is used
                 </p>
               </div>
               <div class="inner">
-                <a href="">Optimization with Critical Points</a>
+                <a href="">Transformer Models</a>
                 <p>
-                  Introduction to critical points and how they are used in
-                  optimization
+                  An introduction into the architecture that has revolutionized
+                  deep learning and made advanced machine translation and large
+                  language models possible
                 </p>
               </div>
               <div class="inner">
-                <a href="">Critical Points vs Gradient Descent</a>
+                <a href="">General Adversarial Networks</a>
                 <p>
-                  Pros and cons of using critical points in optimization as
-                  opposed to gradient descent
+                  Introduction to a unsupervised learning model that tries to
+                  create perfect fakes
+                </p>
+              </div>
+              <div class="inner">
+                <a href="">Diffusion Models</a>
+                <p>
+                  Another unsupervised learning model that recognizes patterns
+                  from strategically added noise
                 </p>
               </div>
             </div>
