@@ -53,6 +53,7 @@ main {
   border-radius: 6px;
   padding: 20px 60px 30px 40px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeinout 1s;
 }
 .container .content {
   display: flex;
@@ -203,5 +204,13 @@ main {
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+@keyframes fadeinout {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
