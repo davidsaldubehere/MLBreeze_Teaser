@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>K Nearest Neighbor</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <link rel="stylesheet" href="css/gradients.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="nav" id="navbar">
+      <a href="index.html" class="active">MLbreeze</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <main>
+      <dialog id="dialog">
+        <h2>Definition:</h2>
+        <p id="dialogContent">
+          A CSS-only modal based on the
+          <a
+            href="https://developer.mozilla.org/es/docs/Web/CSS/::backdrop"
+            target="_blank"
+            >::backdrop</a
+          >
+          pseudo-class. Hope you find it helpful.
+        </p>
+        <button onclick="window.dialog.close();" aria-label="close" class="x">
+          ❌
+        </button>
+      </dialog>
+      <h1>Introduction to K Nearest Neighbor Algorithm</h1>
+      <section>
+        <div class="text">
+          <h2>Background</h2>
+          <p>
+            The first algorithm that we will look at is the K-Nearest Neighbors
+            algorithm which is an algorithm that requires a set of objects (we
+            will use dots in these examples) and corresponding labels (red or
+            blue) to be able to classify new objects based on their similarity
+            to the objects in the dataset. <br /><br /><br />
+            The K-NN algorithm is based on the idea that objects that with
+            similar features are likely to be in the same class.
+          </p>
+
+          <p>
+            The notion of similarity is not always easy to define, but for most
+            cases we will use some type of distance metric to measure the
+            similarity between objects. <br /><br /><br />
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="text">
+          <h2>1-NN</h2>
+          <p>
+            Let's look a the simplest case of the K-NN algorithm, the 1-NN
+            algorithm. (We will define what K means in a second)
+            <br /><br /><br />
+            The 1-NN algorithm is simple. Given a new object, we find the
+            closest object in the dataset and classify the new object as the
+            same class as the closest object in the dataset.
+          </p>
+          <div class="video-container">
+            <video controls>
+              <source src="assets/knn_1nn.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <p>
+            Easy enough! But what does K mean then?<br /><br /><br />
+
+            K is simply the number of neighbors that we will consider when
+            classifying a new object. <br /><br /><br />
+
+            For example, since K = 1 in the 1-NN algorithm, we only consider the
+            closest object to the new object. <br /><br /><br />
+
+            If K = 3, we consider the 3 closest objects to the new object and
+            classify the new object as the class that is most common among the 3
+            closest objects. <br /><br /><br />
+
+            If there are only 2 types of objects in the dataset, then we would
+            pick the class that is most common among the 3 closest objects.
+            <br /><br /><br />
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="text">
+          <h2>3-NN</h2>
+          <p>
+            Here's an example demonstrating how the 3-NN algorithm works.
+            <br /><br /><br />
+            In this example, the 3 closest objects to the new object are
+            considered and the new object is classified as the class that is
+            most common among the 3 closest objects. <br /><br /><br />
+          </p>
+          <div class="video-container">
+            <video controls>
+              <source src="assets/knn_3nn.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="intro">
+      <div class="intro-text">
+        <h1 class="hide">
+          <span class="text">Intro to</span>
+        </h1>
+        <h1 class="hide">
+          <span class="text">K-NN</span>
+        </h1>
+      </div>
+    </div>
+    <div class="slider"></div>
+    <script defer src="js/gradients.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+      integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
