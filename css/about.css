@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  background: linear-gradient(334deg, #aec7ff, #2062ae, #011550);
+  background-size: 180% 180%;
+  animation: gradient-animation 6s ease infinite;
+}
+.nav {
+  background-color: #3333332d;
+  overflow: hidden;
+}
+
+.nav a {
+  float: left;
+  display: block;
+  color: rgba(255, 255, 255, 0.594);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  transition: 0.3s;
+  font-family: Poppins, sans-serif;
+}
+
+.nav a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.nav a.active {
+  background-color: #8080804f;
+  color: white;
+}
+
+.nav .icon {
+  display: none;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+}
+
+section:nth-child(1) {
+  animation-delay: 0s;
+}
+
+section:nth-child(2) {
+  animation-delay: 0.2s; /* Adjust as needed */
+}
+
+section:nth-child(3) {
+  animation-delay: 0.4s; /* Adjust as needed */
+}
+section {
+  opacity: 0;
+  animation: fadeinout 1s; /* Adjust animation duration as needed */
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.719);
+  border-radius: 10px;
+  margin: 30px;
+  padding: 20px;
+  transition: 0.6s;
+  animation-fill-mode: forwards;
+}
+section h1 {
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+section p {
+  font-size: large;
+}
+
+.contact {
+  width: 100%;
+  text-align: center;
+}
+.contact h1 {
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.745);
+}
+.contact a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 20px;
+  transition: 0.3s;
+  border: 2px solid #00000059;
+  border-radius: 5px;
+  padding: 10px 40px;
+  background-color: #00000059;
+}
+.contact a:hover {
+  background-color: #000000;
+  color: white;
+}
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes fadeinout {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
